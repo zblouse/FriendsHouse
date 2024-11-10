@@ -1,3 +1,9 @@
 <resources>
     <string name="app_name">FriendsHouse</string>
+    <string name="add_button">Click to add a Friends House</string>
+    <string name="add_house_name_prompt">Friend\'s Name</string>
+    <string name="add_house_description_prompt">Description</string>
+    <string name="add_house_latitude_prompt">Latitude</string>
+    <string name="add_house_longitude_prompt">Longitude</string>
+    <string name="add_house_button_text">Add House</string>
 </resources>

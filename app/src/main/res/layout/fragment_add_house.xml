@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <EditText
+        android:id="@+id/name_edit_text"
+        android:layout_width="300dp"
+        android:layout_height="60dp"
+        android:hint="@string/add_house_name_prompt"/>
+
+    <EditText
+        android:id="@+id/description_edit_text"
+        android:layout_width="300dp"
+        android:layout_height="60dp"
+        android:hint="@string/add_house_description_prompt"/>
+
+    <EditText
+        android:id="@+id/latitude_edit_text"
+        android:layout_width="300dp"
+        android:layout_height="60dp"
+        android:hint="@string/add_house_latitude_prompt"
+        android:inputType="numberDecimal"/>
+
+    <EditText
+        android:id="@+id/longitude_edit_text"
+        android:layout_width="300dp"
+        android:layout_height="60dp"
+        android:hint="@string/add_house_longitude_prompt"
+        android:inputType="numberDecimal"/>
+
+    <Button
+        android:layout_width="300dp"
+        android:layout_height="60dp"
+        android:id="@+id/add_house_button"
+        android:text="@string/add_house_button_text"/>
+
+
+</LinearLayout>
