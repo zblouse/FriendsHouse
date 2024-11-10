@@ -6,4 +6,5 @@
     <string name="add_house_latitude_prompt">Latitude</string>
     <string name="add_house_longitude_prompt">Longitude</string>
     <string name="add_house_button_text">Add House</string>
+    <string name="home_action_button">Home</string>
 </resources>
