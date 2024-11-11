@@ -65,7 +65,7 @@ public class HouseDatabaseHelper extends SQLiteOpenHelper {
                 houses.add(house);
             } while(houseCursor.moveToNext());
         }
-
+        houseCursor.close();
         database.close();
         return houses;
     }

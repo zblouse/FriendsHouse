@@ -13,9 +13,11 @@ import androidx.core.graphics.Insets;
 import androidx.core.view.ViewCompat;
 import androidx.core.view.WindowInsetsCompat;
 
+import com.google.android.gms.maps.CameraUpdateFactory;
 import com.google.android.gms.maps.GoogleMap;
 import com.google.android.gms.maps.OnMapReadyCallback;
 import com.google.android.gms.maps.SupportMapFragment;
+import com.google.android.gms.maps.UiSettings;
 import com.google.android.gms.maps.model.LatLng;
 import com.google.android.gms.maps.model.MarkerOptions;
 import com.google.android.material.floatingactionbutton.FloatingActionButton;
@@ -77,8 +79,12 @@ public class MainActivity extends AppCompatActivity implements OnMapReadyCallbac
 
     @Override
     public void onMapReady(@NonNull GoogleMap googleMap) {
+        System.out.println("Map is ready");
+        LatLng house = new LatLng(activeHouse.getLatitude(), activeHouse.getLongitude());
         googleMap.addMarker(new MarkerOptions()
-                .position(new LatLng(activeHouse.getLatitude(), activeHouse.getLongitude()))
+                .position(house)
                 .title(activeHouse.getName()));
+        googleMap.moveCamera(CameraUpdateFactory.newLatLngZoom(house,15));
+        googleMap.getUiSettings().setZoomControlsEnabled(true);
     }
 }

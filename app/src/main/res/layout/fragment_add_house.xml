@@ -23,14 +23,14 @@
         android:layout_width="300dp"
         android:layout_height="60dp"
         android:hint="@string/add_house_latitude_prompt"
-        android:inputType="numberDecimal"/>
+        android:inputType="numberDecimal|numberSigned"/>
 
     <EditText
         android:id="@+id/longitude_edit_text"
         android:layout_width="300dp"
         android:layout_height="60dp"
         android:hint="@string/add_house_longitude_prompt"
-        android:inputType="numberDecimal"/>
+        android:inputType="numberDecimal|numberSigned"/>
 
     <Button
         android:layout_width="300dp"
