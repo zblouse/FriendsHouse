@@ -30,6 +30,12 @@ public class HouseAdapter extends RecyclerView.Adapter<HouseAdapter.ViewHolder> 
         House house = houses.get(position);
         holder.nameTextView.setText(house.getName());
         holder.descriptionTextView.setText(house.getDescription());
+        holder.itemView.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                ((MainActivity)view.getContext()).displayHouseMap(house);
+            }
+        });
     }
 
     @Override
