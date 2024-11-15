@@ -18,6 +18,7 @@ import com.google.android.gms.maps.GoogleMap;
 import com.google.android.gms.maps.OnMapReadyCallback;
 import com.google.android.gms.maps.SupportMapFragment;
 import com.google.android.gms.maps.UiSettings;
+import com.google.android.gms.maps.model.BitmapDescriptorFactory;
 import com.google.android.gms.maps.model.LatLng;
 import com.google.android.gms.maps.model.MarkerOptions;
 import com.google.android.material.floatingactionbutton.FloatingActionButton;
@@ -39,7 +40,7 @@ public class MainActivity extends AppCompatActivity implements OnMapReadyCallbac
 
         Toolbar toolbar = findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
-
+        //this.deleteDatabase("house_database");
         FloatingActionButton floatingActionButton = findViewById(R.id.floating_button);
         floatingActionButton.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -83,7 +84,9 @@ public class MainActivity extends AppCompatActivity implements OnMapReadyCallbac
         LatLng house = new LatLng(activeHouse.getLatitude(), activeHouse.getLongitude());
         googleMap.addMarker(new MarkerOptions()
                 .position(house)
-                .title(activeHouse.getName()));
+                .snippet(activeHouse.getDescription())
+                .title(activeHouse.getName())
+                .icon(BitmapDescriptorFactory.defaultMarker(BitmapDescriptorFactory.HUE_ORANGE)));
         googleMap.moveCamera(CameraUpdateFactory.newLatLngZoom(house,15));
         googleMap.getUiSettings().setZoomControlsEnabled(true);
     }

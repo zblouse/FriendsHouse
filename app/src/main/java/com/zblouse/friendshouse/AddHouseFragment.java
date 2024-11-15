@@ -38,7 +38,7 @@ public class AddHouseFragment extends Fragment {
                 } else {
                     HouseDatabaseHelper helper = new HouseDatabaseHelper(layout.getContext());
                     House house = new House(nameEditText.getText().toString(),descriptionEditText.getText().toString(),
-                            Double.valueOf(longitudeEditText.getText().toString()), Double.valueOf(latitudeEditText.getText().toString()));
+                            Double.valueOf(latitudeEditText.getText().toString()),Double.valueOf(longitudeEditText.getText().toString()));
                     helper.addHouseToDatabase(house);
                     getActivity().getSupportFragmentManager().beginTransaction()
                             .replace(R.id.fragment_container, new ListViewFragment()).commit();
