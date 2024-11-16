@@ -2,6 +2,9 @@ package com.zblouse.friendshouse;
 
 import java.io.Serializable;
 
+/**
+ * Basic POJO for a house object
+ */
 public class House implements Serializable {
     private int id;
     private String name;

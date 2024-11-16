@@ -1,6 +1,8 @@
+<!--Sets up the UI for the top navigation bar-->
 <menu xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto">
 
+    <!--Button to return to the home screen(list_view fragment)-->
     <item
         android:id="@+id/action_home"
         android:icon="@drawable/home"

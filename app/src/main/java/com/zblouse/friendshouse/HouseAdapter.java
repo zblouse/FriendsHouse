@@ -10,6 +10,9 @@ import androidx.recyclerview.widget.RecyclerView;
 
 import java.util.List;
 
+/**
+ * RecyclerView Adapter for displaying Houses
+ */
 public class HouseAdapter extends RecyclerView.Adapter<HouseAdapter.ViewHolder> {
 
     private final List<House> houses;
@@ -21,6 +24,7 @@ public class HouseAdapter extends RecyclerView.Adapter<HouseAdapter.ViewHolder> 
     @NonNull
     @Override
     public ViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
+        //Inflates the layout from the home_display layout
         View view = LayoutInflater.from(parent.getContext()).inflate(R.layout.home_display,parent,false);
         return new ViewHolder(view);
     }
@@ -33,6 +37,7 @@ public class HouseAdapter extends RecyclerView.Adapter<HouseAdapter.ViewHolder> 
         holder.itemView.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
+                //When the user clicks on this house, call the display house map in the MainActivity
                 ((MainActivity)view.getContext()).displayHouseMap(house);
             }
         });
@@ -50,6 +55,7 @@ public class HouseAdapter extends RecyclerView.Adapter<HouseAdapter.ViewHolder> 
 
         public ViewHolder(View houseView){
             super(houseView);
+            //Gets the UI Elements for this House display
             nameTextView = houseView.findViewById(R.id.house_name);
             descriptionTextView = houseView.findViewById(R.id.house_description);
         }

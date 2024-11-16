@@ -2,6 +2,8 @@
 <resources>
     <color name="black">#FF000000</color>
     <color name="white">#FFFFFFFF</color>
+    <!--Orange is the primary color of the app-->
     <color name="orange">#FFFF6E07</color>
+    <!--Gray is the secondary color of the app-->
     <color name="gray">#CECECE</color>
 </resources>
